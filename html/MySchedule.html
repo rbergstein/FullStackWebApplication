@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MySchedule</title>
+        <link rel="stylesheet" href="/css/MySchedule.css">
+        <script src="/js/MySchedule.js"></script>
+        <script src="/js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
+    </head>
+    <body>
+
+    <ul>
+        <li><a href="MyServer"><strong>Server</strong></a></li>
+        <li><a href="schedule"><strong>Schedule</strong></a></li>
+        <li><a href="AboutMe" target="_self"><strong>AboutMe</strong></a></li>
+        <li><a href="addEvent"><strong>AddEvent</strong></a></li>
+        <li><a href="stockQuotes"><strong>Stocks</strong></a></li>
+        <li><a href="logout"><strong>Logout</strong></a></li>
+    </ul>
+
+    <h1>My Schedule</h1>
+
+    <table id="maintable">
+        <tbody>
+            <tr>
+                <th>Day</th>
+                <th>Event</th>
+                <th>Time</th>
+                <th>Event Location (Virtual or Physical)</th>
+                <th>Phone Number</th>
+                <th>URL</th>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/anderson.jpg')">
+                <td>Monday</td>
+                <td>Csci 4131 Lecture</td>
+                <td>11:15am - 12:30pm</td>
+                <td>257 S 19th Ave, Minneapolis, MN 55455<img src="/img/anderson.jpg" alt="Anderson"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790654">Csci 4131 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/Tate.png')">
+                <td>Monday</td>
+                <td>Csci 4211 Lecture</td>
+                <td>2:30pm - 3:45pm</td>
+                <td>116 Church St SE, Minneapolis, MN 55455<img src="/img/Tate.png" alt="Tate"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790655">Csci 4211 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/akerman.jpeg')">
+                <td>Monday</td>
+                <td>Csci 5123 Lecture</td>
+                <td>4:00pm - 5:15pm</td>
+                <td>110 Union St SE, Minneapolis, MN 55455<img src="/img/akerman.jpeg" alt="Akerman"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=817341">Csci 5123 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/Lind.jpg')">
+                <td>Tuesday</td>
+                <td>Csci 5512 Lecture</td>
+                <td>5:45pm - 7:00pm</td>
+                <td>207 Church St SE, Minneapolis, MN 55455<img src="/img/Lind.jpg" alt="Lind"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=016765">Csci 5512 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/rec.jpg')">
+                <td>Tuesday</td>
+                <td>Workout</td>
+                <td>7:30pm - 9:00pm</td>
+                <td>123 SE Harvard St, Minneapolis, MN 55455<br><img src="/img/rec.jpg" alt="rec"></td>
+                <td>(612) 625-8760</td>
+                <td><a href="https://recwell.umn.edu/outdoor/climbing">UMN Climbing Center</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/anderson.jpg')">
+                <td>Wednesday</td>
+                <td>Csci 4131 Lecture</td>
+                <td>11:15am - 12:30pm</td>
+                <td>257 S 19th Ave, Minneapolis, MN 55455<img src="/img/anderson.jpg" alt="Anderson"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790654">Csci 4131 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/Tate.png')">
+                <td>Wednesday</td>
+                <td>Csci 4211 Lecture</td>
+                <td>2:30pm - 3:45pm</td>
+                <td>116 Church St SE, Minneapolis, MN 55455<img src="/img/Tate.png" alt="Tate"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790655">Csci 4211 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/akerman.jpeg')">
+                <td>Wednesday</td>
+                <td>Csci 5123 Lecture</td>
+                <td>4:00pm - 5:15pm</td>
+                <td>110 Union St SE, Minneapolis, MN 55455<img src="/img/akerman.jpeg" alt="Akerman"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=817341">Csci 5123 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/Lind.jpg')">
+                <td>Thursday</td>
+                <td>Csci 5512 Lecture</td>
+                <td>5:45pm - 7:00pm</td>
+                <td>207 Church St SE, Minneapolis, MN 55455<img src="/img/Lind.jpg" alt="Lind"></td>
+                <td>No Phone Number</td>
+                <td><a href="https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=016765">Csci 5512 Info</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/rec.jpg')">
+                <td>Thursday</td>
+                <td>Workout</td>
+                <td>7:30pm - 9:00pm</td>
+                <td>123 SE Harvard St, Minneapolis, MN 55455<br><img src="/img/rec.jpg" alt="rec"></td>
+                <td>(612) 625-8760</td>
+                <td><a href="https://recwell.umn.edu/outdoor/climbing">UMN Climbing Center</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/rec.jpg')">
+                <td>Friday</td>
+                <td>Rock Climbing Team Practice</td>
+                <td>10:00am - 12:00pm</td>
+                <td>123 SE Harvard St, Minneapolis, MN 55455<br><img src="/img/rec.jpg" alt="rec"></td>
+                <td>(612) 625-8760</td>
+                <td><a href="https://recwell.umn.edu/outdoor/climbing">UMN Climbing Center</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/walter.jpg')">
+                <td>Saturday</td>
+                <td>Library Study/Homework Session</td>
+                <td>1:00pm - 4:00pm</td>
+                <td>117 Pleasant St SE, Minneapolis, MN 55455<br><img src="/img/walter.jpg" alt="Walter"></td>
+                <td>(612) 624-3366</td>
+                <td><a href="https://www.lib.umn.edu/spaces/walter">Walter Library</a></td>
+            </tr>
+            <tr class="thumbnail" onmouseover="mouseOver('/img/tairrie.jpeg')">
+                <td>Sunday</td>
+                <td>Designated Apartment Cleaning Time</td>
+                <td>9:30am - 11:00am</td>
+                <td>609 SE Oak St, Minneapolis, MN 55414<br><img src="/img/tairrie.jpeg" alt="Home!"></td>
+                <td>(612) 623-3634 (Front Desk)</td>
+                <td><a href="https://www.dinnaken.com/page/show/714221--tairrie-house">Tairrie House</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <img id="imageRight" src="/img/gophers-mascot.png" alt="Goldy Gopher">
+    </div>
+
+    <div id="bottom-panel">
+        <div id="direction-panel"></div>
+
+        <div id="map" onload="initMap()"></div>    
+    
+        <div id="info-panel">
+            <div>
+                <label for="destination">Directions to: </label>
+                <input type="text" id="destination" placeholder="Enter destination">
+            </div>
+            
+            <label for="travelMode">via:</label>
+
+            <div>
+                <input type="radio" id="driving" name="travelMode" value="DRIVING" checked>
+                <label for="driving">Driving</label>
+            </div>
+        
+            <div>
+                <input type="radio" id="walking" name="travelMode" value="WALKING">
+                <label for="walking">Walking</label>
+            </div>
+
+            <div>
+                <input type="radio" id="transit" name="travelMode" value="TRANSIT">
+                <label for="transit">Transit</label>
+            </div>
+            
+            
+            <button type="button" id="destinationButton" onclick="calculateRoute()">Find route!</button>
+        </div>
+    </div>
+
+    </body>
+</html>
+    

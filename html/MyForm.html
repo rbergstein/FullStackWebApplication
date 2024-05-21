@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AboutMe</title>
+        <link rel="stylesheet" href="/css/MyForm.css">
+        <script src="/js/formMap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
+    </head>
+    <body>
+
+    <ul id="header">
+        <li><a href="MyServer"><strong>Server</strong></a></li>
+        <li><a href="schedule"><strong>Schedule</strong></a></li>
+        <li><a href="AboutMe" target="_self"><strong>AboutMe</strong></a></li>
+        <li><a href="addEvent"><strong>AddEvent</strong></a></li>
+        <li><a href="stockQuotes"><strong>Stocks</strong></a></li>
+        <li><a href="logout"><strong>Logout</strong></a></li>
+    </ul>
+
+    <div id="forms">
+        <div id="inputForm">
+            <h1>Add an Event!</h1>
+            <form action="/EventLog.html" method="post">
+                <p><label for="event">• Event: </label><input type="text" name="event" id="event" required></p>
+                <p>
+                    <label for="day">• Day of Week - </label>
+                    <select id="day" name="day">
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+                </p>
+                <p><label for="start">• Start: </label><input type="time" name="start" id="start" required></p>
+                <p><label for="end">• End: </label><input type="time" name="end" id="end" required></p>
+                <p><label for="phone">• Phone: </label><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####" required></p>
+                <p><label for="location">• Location: </label><input type="text" name="location" id="location" required></p>
+                <p><label for="extra">• Extra Info: </label><input type="text" name="extra" id="extra" required></p>
+                <p><label for="url">• Enter URL for Extra Info: </label><input type="url" name="url" id="url" required></p>
+                <p><input type="reset" value="Clear form"><input type="submit" value="Submit" ></p>
+            </form>
+        </div>
+
+        <div id="map" onload="initMap()"></div>
+    </div>
+
+    
+</html>

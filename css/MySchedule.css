@@ -1,0 +1,109 @@
+body {
+    background-color: lightsteelblue;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, steelblue, darkslategrey);
+    border: 1px solid black;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color:wheat;
+}
+
+table {
+    border-collapse: collapse;
+    width: 65%;
+}
+table,th,td {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+    background-color:lightslategray;
+}
+
+tr:nth-child(even) {
+    background-color:cadetblue;
+}
+
+#imageRight {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 465px;
+    height: 330px;
+    padding-right: 20px;
+}
+
+td img {
+    display: none;
+}
+
+tr.thumbnail:hover img {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+.gm-style-iw {
+    text-align: center;
+}
+
+#map {
+    width: 80%;
+    height: 500px;
+    flex: 4;
+    border: 1px solid darkslategray;
+}
+#info-panel {
+    margin-top: 55px;
+    margin-left: 7px;
+    width: 20%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    border: 1px solid darkslategray;
+    height: 155px;
+    background-color: lightslategray;
+}
+#bottom-panel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#info-panel label {
+    margin-bottom: 5px;
+}
+#info-panel input {
+    margin-left: 5px;
+}
+#destinationButton {
+    margin-top: 5px;
+}
+#direction-panel {
+    background-color: lightslategray;
+    height: 500px;
+    margin-right: 7px;
+    flex: 1;
+    width: 20%;
+    border: 1px solid darkslategray;
+    overflow: auto;
+}

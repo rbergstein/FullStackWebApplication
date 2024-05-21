@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>MyServer</title>
+    <style>
+        div{
+            text-align:center;
+            margin-bottom: 5%;
+        }
+        #links ul li{
+            display: inline;
+            margin-right: 30px;
+        }
+        label{
+          margin-right: 5px;
+        }
+    </style>
+  </head>
+  <body>
+  <center>
+    <h1>Server Page</h1></br>
+  </center>
+  <div id='links'>
+    <ul>
+        <li> <a href="Coffman"> Coffman Picture</a> </li>
+        <li> <a href="Coffman_N_OuttaSpace"> Coffman + OuttaSpace</a> </li>
+        <li> <a href="OuttaSpace"> OuttaSpace MP3</a> </li>
+    </ul>
+  </div>
+    <center>
+      <form action="/redirect" method="GET">
+          <label for="searchForm">Search Form:</label>
+          <br>
+          <br>
+          <label for="input">Search Term:</label>
+          <input type="text" id="input" name="input" required>
+          <label for="source">Search Source</label>
+          <select id="source" name="source">
+              <option value="google">Google</option>
+              <option value="youtube">YouTube</option>
+          </select>
+          <button type="submit">Submit</button>
+      </form>
+  </center>
+  <center>
+    <form action="/calculator" method="GET">
+        <label for="calculatorForm">Calculator:</label>
+        <br>
+        <br>
+        <label for="firstnum">First Number:</label>
+        <input type="number" id="firstnum" name="firstnum" required>
+        <label for="operator">Operator</label>
+        <select id="operator" name="operator">
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+        </select>
+        <label for="secondnum">Second Number:</label>
+        <input type="number" id="secondnum" name="secondnum" required>
+        <button type="submit">Submit</button>
+    </form>
+  </center>
+<hr>
+  <div>
+    <a href="MySchedule"> Go to Schedule page</a>
+    <br>
+    <a href="AboutMe"> Go to AboutMe page</a>
+  </div>
+  </body>
+</html>

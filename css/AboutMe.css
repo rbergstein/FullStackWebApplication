@@ -1,0 +1,62 @@
+body {
+    background-color: lightsteelblue;
+}
+
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, steelblue, darkslategrey);
+    border: 1px solid black;
+}
+#navBar li {
+    float: left;
+}
+#navBar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navBar li a:hover {
+    background-color:wheat;
+}
+
+table {
+    border-collapse: collapse;
+    width: 96%;
+}
+table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#me {
+    float: left;
+}
+img {
+    display: block;
+    margin: auto;
+    height: 698px;
+    width: 339px;
+}
+#meRow {
+    height: 698px;
+    width: 339px; 
+}
+
+iframe {
+    margin: 10px;
+    border: none;
+}
+
+#vid {
+    width: 974px; 
+    height: 548px;
+}
+
+#clock {
+    margin: auto;
+}

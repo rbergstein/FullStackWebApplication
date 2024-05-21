@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AboutMe</title>
+        <link rel="stylesheet" href="/css/stockQuotes.css">
+        <script src="/js/stocks.js"></script>
+        <script src="/js/stocksKEY.js"></script>
+    </head>
+    <body>
+
+    <ul id="navBar">
+        <li><a href="MyServer"><strong>Server</strong></a></li>
+        <li><a href="schedule"><strong>Schedule</strong></a></li>
+        <li><a href="AboutMe" target="_self"><strong>AboutMe</strong></a></li>
+        <li><a href="addEvent"><strong>AddEvent</strong></a></li>
+        <li><a href="stockQuotes"><strong>Stocks</strong></a></li>
+        <li><a href="logout"><strong>Logout</strong></a></li>
+    </ul>
+
+    <!-- user input text object -->
+    <label id="move" for="stockName">Enter Stock Symbol:</label>
+    <div class="inputs">
+        <input type="text" id="stockName" name="stockName" placeholder="eg. META, AMZN">
+        <button type="button" onclick="stockData()">Get Stock Data</button>
+    </div>
+    
+
+    <!-- textarea object -->
+    <label id="movemore" for="stockText">API Response:</label>
+    <textarea id="stockText" name="stockText">
+
+    </textarea>
+
+    </body>
+</html>

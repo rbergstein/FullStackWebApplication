@@ -1,0 +1,63 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  link(rel='stylesheet' type='text/css' href='client/css/style.css')
+  title Login
+  style(type='text/css').
+    .jumbotron { text-align: center; }
+script.
+  function getElements() {
+  let user = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({username: user, password: password})
+  };
+  fetch('/login', requestOptions)
+  .then(response => {
+  console.log("Status is: " + response.status);
+  return response.text();
+  })
+  .then(dataFromServer=> {
+  var data = JSON.parse(dataFromServer);
+  console.log(JSON.stringify(data));
+  console.log("TESTING");
+  if (data.status == "success") {
+  window.location.href = 'MySchedule';
+  }
+  else {
+  document.getElementById('error').style.hidden = "false";
+  document.getElementById('password').value = "";
+  document.getElementById('username').value = "";
+  }
+  })
+  .catch(error=> console.log("Request failed",error));
+  console.log("fetch done")
+  }
+.jumbotron(style='background: DarkSeaGreen !important')
+  h1 Login Page
+  p Please enter your user name and password. Both are case sensitive.
+.row
+  .col-md-1
+  .col-md-10
+    form
+      p#error(hidden='true') Login Error: Try again.
+      label(for='username') User:
+      br
+      input#username(type='text' placeholder='Username' style='width: 500px')
+      br
+      br
+      label(for='password') Password:
+      br
+      input#password(type='password' placeholder='Password' style='width: 500px')
+      br
+      br
+      button#myButton.btn.btn-primary.btn-block(type='button' onclick='getElements()') Login
+  .col-md-1
+.col-md-1

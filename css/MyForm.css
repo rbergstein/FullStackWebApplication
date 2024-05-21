@@ -1,0 +1,73 @@
+body {
+    background-color:lightsteelblue;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, steelblue, darkslategrey);
+    border: 1px solid black;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color:wheat;
+}
+h1 {
+    padding-left: 30px;
+    color: darkslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input, select, option {
+    width: 120px;
+    padding: 5px;
+    background-color:whitesmoke;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+label {
+    padding-left: 40px;
+}
+
+input[type=reset] {
+    margin-left: 40px;
+    color: whitesmoke;
+    background-color:darkblue;
+}
+input[type=submit] {
+    margin-left: 10px;
+    color: whitesmoke;
+    background-color:darkblue;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: mediumblue;
+}
+
+p {
+    font-weight: bold;
+}
+
+#forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    width: 25%;
+    height: 300px;
+}
+#inputForm {
+    width: auto;
+    padding: 20px;
+}

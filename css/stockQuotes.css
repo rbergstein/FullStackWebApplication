@@ -1,0 +1,66 @@
+body {
+    background-color:lightsteelblue;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, steelblue, darkslategrey);
+    border: 1px solid black;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color:wheat;
+}
+h1 {
+    padding-left: 30px;
+    color: darkslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+#move {
+    margin-top: 150px;
+    
+}
+#movemore {
+    margin-top: 20px;
+    
+}
+#stockName {
+    width: 130px;
+    height: 20px;
+    margin-top: 5px;;
+}
+#stockText {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+    height: 225px;
+    margin-top: 5px;
+    text-align: center;
+}
+button {
+    margin-top: 5px;
+    margin-left: 10px;
+}
